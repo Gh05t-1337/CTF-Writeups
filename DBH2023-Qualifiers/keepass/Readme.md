@@ -45,6 +45,6 @@ with open('wordlist.txt','w') as f:
 using that wordlist, i brute forced the master password using john: <br/>
 ```keepass2john passwords.kdbx >hash.txt``` <br/>
 ```john --wordlist=wordlist.txt hash.txt``` <br/>
-
-The master key is: <3deutschlands00_00B3ST3R00_00Hack3r2023
+ <br/>
+The master key is: `<3deutschlands00_00B3ST3R00_00Hack3r2023` <br/>
 Open the kdbx Database using it to get the flag: DBH{D3utsch1ands_b3s73r_HACKER2023}
