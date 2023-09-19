@@ -5,7 +5,7 @@ The Target is to get the flag that is somewhere on the server where vuln.py is r
 
 ## Solution
 Using a pyc decompiler like pycdc, one can get most of the python code of vuln.py. using a debugger like trepan-xpy, one can understand it further (see `decompiled.py` for my decompilation). The important functions are `run_message` and `King.modt`:
-```
+```py
 class King(Kingdom):    
     def motd(self):
         say = self.shout if hasattr(self, 'shout') else 'I have no messages today.'
