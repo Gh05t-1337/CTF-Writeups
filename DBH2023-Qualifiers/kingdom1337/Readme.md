@@ -33,7 +33,7 @@ After creating instances of the classes `Pawn` and `King` and after checking if 
 We want `king.modt` to return `f'''{popen('echo ' + say).read().strip()}!'''`, so we can inject bash code. Therefore, we somehow need to add a `shout` attribute to king during `run_message`. This can be accomplished using following json:
 `{"__class__":{"__base__":{"__base__":{"__base__":{"shout":"our_message"}}}}}`
 
-use trepan-xpy or any other python debugger to understand why and how this works.
+Why does this work? Well, i won't tell you. You will probably learn more if you try to understand it yourself. You can use google and a debugger like trepan-xpy.
 
 next, we take a look on how the king shouts our message. it uses:
 `popen("echo " + say).read().strip()`
