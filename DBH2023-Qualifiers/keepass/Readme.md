@@ -1,6 +1,6 @@
 # keepass
 ## Challenge 
-Decrypt the kdbx database
+A kdbx Database and a KeePass.DMP file were provided. The challenge is, to decrypt the kdbx database.
 
 ## Solution
 KeePass had a vulnerability, that allowed a hacker to extract the master password for a kdbx database from a dump file, see [CVE-2023-32784](https://nvd.nist.gov/vuln/detail/CVE-2023-32784).
