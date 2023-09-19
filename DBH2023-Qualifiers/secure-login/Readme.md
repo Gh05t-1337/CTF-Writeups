@@ -3,7 +3,7 @@
 We get the code of a webpage. we have to login as admin to gain the flag from the webpage-ip/flag directory
 
 ## Solution
-Using the same nonce (IV, initialization vector)twice in AES-GCM is a bad idea. See: https://crypto.stackexchange.com/questions/26790/how-bad-it-is-using-the-same-iv-twice-with-aes-gcm
+Using the same nonce (IV, initialization vector) twice in AES-GCM is a bad idea. See: https://crypto.stackexchange.com/questions/26790/how-bad-it-is-using-the-same-iv-twice-with-aes-gcm
 
 By inspecting `app.py` we see, that AES-GCM is used, to generate a token that is then saved into a cookie. this token is also used in `get_user`, to get the users name and output the users flag on /flag. So we need to generate a cookie that makes `get_user` return `admin`.
 
