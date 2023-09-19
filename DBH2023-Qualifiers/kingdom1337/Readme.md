@@ -31,7 +31,9 @@ def run_message(src, dst):
 After creating instances of the classes `Pawn` and `King` and after checking if the users input is in json format and converting it to a dict, the `run_message` function will be called, with the dict as first arg, and the pawn instance as second arg. Afterwards, `king.modt` will be called (`king` is the instance of `King`).
 
 We want `king.modt` to return `f'''{popen('echo ' + say).read().strip()}!'''`, so we can inject bash code. Therefore, we somehow need to add a `shout` attribute to king during `run_message`. This can be accomplished using following json:
-`{"__class__":{"__base__":{"__base__":{"__base__":{"shout":"our_message"}}}}}`
+```json
+{"__class__":{"__base__":{"__base__":{"__base__":{"shout":"our_message"}}}}}
+```
 
 Why does this work? Well, i won't tell you. You will probably learn more if you try to understand it yourself. You can use google and a debugger like trepan-xpy.
 
