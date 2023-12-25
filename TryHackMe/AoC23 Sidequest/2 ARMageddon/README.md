@@ -1,6 +1,6 @@
 # AoC23 Sidequest 2: Snowy ARMageddon
 You can find the challenge here: <https://tryhackme.com/room/armageddon2r>.
-You could find a QR code to this challenge on AoC23 day 11.
+You could find a QR code to this challenge on [AoC23](https://tryhackme.com/room/adventofcyber2023) day 6.
 
 ## Part 0: NMAP Scan
 
@@ -28,7 +28,7 @@ telnet IP_ADDRESS
 We get our first shell!
 
 
-After a bit of searching, we find the cams username and password in `/etc/webs/umconfig.txt`. The credentials are: `admin`:`Y3tiStarCur!ouspassword=admin`. After using these to log into the cams website, we get our first flag!
+After a bit of searching, we find the cams username and password in `/etc/webs/umconfig.txt`. After using these to log into the cams website, we get our first flag!
 
 <img src="images/flag1.png">
 
