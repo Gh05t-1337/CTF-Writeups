@@ -1,5 +1,5 @@
 # AoC23 Sidequest 3: Frosteau Busy with Vim
-You can find the challenge here: https://tryhackme.com/room/busyvimfrosteau.
+You can find the challenge here: <https://tryhackme.com/room/busyvimfrosteau>.
 You could find a QR code to this challenge on [AoC23](https://tryhackme.com/room/adventofcyber2023) day 11.
 
 ## Part 0: NMAP Scan
