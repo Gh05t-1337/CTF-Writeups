@@ -1,4 +1,4 @@
-# AoC23 Sidequest 2: Snowy ARMageddon
+# AoC23 Sidequest 1: The Return of the Yeti
 You can find the challenge here: <https://tryhackme.com/room/adv3nt0fdbopsjcap>.
 You could find the four pieces of a QR code to this challenge on TryHackMe's social media. 
 
