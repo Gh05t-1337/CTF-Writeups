@@ -2,6 +2,8 @@
 You can find the challenge here: <https://tryhackme.com/room/armageddon2r>.
 You could find a QR code to this challenge on [AoC23](https://tryhackme.com/room/adventofcyber2023) day 6.
 
+**The solution shown here, seems to have been unintended. It might not be working anymore.**
+
 ## Part 0: NMAP Scan
 
 The Yeti told us to be stealthy, so let's keep the scan simple:
