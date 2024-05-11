@@ -9,16 +9,11 @@ _start:
     mov rdi,2
     mov rsi,1
     mov rdx,0
-    mov rax,41	# socket(AF_INET,SOCK_STREAM,IPPROTO_IP) = 3
+    mov rax,41	# socket(AF_INET,SOCK_STREAM,IPPROTO_IP)
     syscall
 
     mov rdi,3
-    mov WORD PTR [rsp+0], 0x0002	# AF_INET
-    mov WORD PTR [rsp+2], 0x5000	# port 80
-    mov DWORD PTR [rsp+4], 0x00000000	# IP address
-    mov DWORD PTR [rsp+8], 0x00000000	# padding
-    mov DWORD PTR [rsp+12], 0x00000000	# more padding
-    mov rsi,rsp
+    lea rsi,[sockaddr]
     mov rdx,16
     mov rax,49	# bind
     syscall
@@ -103,7 +98,7 @@ get:
     syscall
 
 post:
-    lea rdi,[buf+5]	# buf+4 is start of filename in GET request
+    lea rdi,[buf+5]	    # buf+5 is start of filename in POST request
     mov [buf+21],WORD PTR 0x0000	# put zeroes at end of file name in GET request
     mov rsi,65
     mov rdx,511
@@ -143,7 +138,11 @@ post:
 .section .data
     bufsize: .word 1024
     msg: .ascii "HTTP/1.0 200 OK\r\n\r\n"
+    sockaddr:
+        .2byte 2	# AF_INET
+        .2byte 0x5000	# Port 80
+        .4byte 0	# IP 0.0.0.0
+        .8byte 0	# padding
 
 .section .bss
     buf: .space 1024
-
